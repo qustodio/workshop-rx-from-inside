@@ -8,5 +8,6 @@ export { of } from './creation/of';
 export { interval } from './creation/interval';
 export { share } from './operators/share';
 export { shareReplay } from './operators/shareReplay';
+export { map } from './operators/map';
 
 export { Observable, Subject, ReplaySubject };
