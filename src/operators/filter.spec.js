@@ -1,7 +1,7 @@
 import { filter } from './filter';
 import { seq } from '../creation/seq';
 
-describe.skip('operator/filter', () => {
+describe('operator/filter', () => {
   it('should filter values', () => {
     const number = seq([1, 2, 3], 50);
     const odds = filter((n) => n % 2 !== 0)(number);
