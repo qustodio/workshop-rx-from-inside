@@ -1,7 +1,7 @@
 import { share } from './share';
 import { seq } from '../creation/seq';
 
-describe.skip('operators/share', () => {
+describe('operators/share', () => {
   it('should share values', () => {
     const numbers = seq([1, 2, 3, 4], 100);
     const sharedNumber = share()(numbers);

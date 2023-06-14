@@ -1,7 +1,7 @@
 import { shareReplay } from './shareReplay';
 import { seq } from '../creation/seq';
 
-describe.skip('operators/shareReplay', () => {
+describe('operators/shareReplay', () => {
   it('should share values', () => {
     const numbers = seq([1, 2, 3, 4], 100);
     const sharedNumber = shareReplay(2)(numbers);

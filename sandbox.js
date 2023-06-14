@@ -14,6 +14,10 @@ const hot = new Observable((observer) => {
 
 hot.subscribe(show('hot data:'), show('hot error:'), show('hot completed'));
 
+setTimeout(() => {
+  hot.subscribe(show('hot data 2:'), show('hot error:'), show('hot completed'));
+}, 4000);
+
 // cold
 const cold = new Observable((observer) => {
   observer.next(1);
@@ -22,3 +26,5 @@ const cold = new Observable((observer) => {
 });
 
 cold.subscribe(show('cold data:'), show('cold error:'), show('cold completed'));
+
+// emitter.on('data', show('emitter data'))
