@@ -1,6 +1,6 @@
 import { interval } from './interval';
 
-describe.skip('creation/interval', () => {
+describe('creation/interval', () => {
   it('should create an interval observable and cancel', () => {
     const expected = ({ next, cancel }) => [
       next(0),
