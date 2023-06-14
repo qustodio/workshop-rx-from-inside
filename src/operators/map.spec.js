@@ -1,7 +1,7 @@
 import { map } from './map';
 import { seq } from '../creation/seq';
 
-describe.skip('operator/map', () => {
+describe('operator/map', () => {
   it('should transform values', () => {
     const number = seq([1, 2, 3], 50);
     const doubles = map((n) => n * 2)(number);
