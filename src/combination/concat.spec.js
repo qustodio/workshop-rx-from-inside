@@ -1,7 +1,7 @@
 import { seq } from '../creation/seq';
 import { concat } from './concat';
 
-describe.skip('combination/concat', () => {
+describe('combination/concat', () => {
   it('should concat values', () => {
     const a = seq([1, 2], 50);
     const b = seq([3, 4], 50);
