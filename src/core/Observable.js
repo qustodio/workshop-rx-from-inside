@@ -11,8 +11,13 @@ class Observable extends Pipeable {
 
   subscribe(next = noop, error = noop, complete = noop) {
     const observer = new Observer(next, error, complete);
-    const cancel = this._subscribe(observer);
-    return new Subscription(cancel);
+    try {
+      const cancel = this._subscribe(observer);
+      return new Subscription(cancel);
+    } catch (e) {
+      observer.error(e);
+      return new Subscription(() => {});
+    }
   }
 }
 

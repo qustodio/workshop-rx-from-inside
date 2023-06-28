@@ -2,7 +2,7 @@ import { catchError } from './catchError';
 import { seq } from '../creation/seq';
 import Observable from '../core/Observable';
 
-describe.skip('operator/catchError', () => {
+describe('operator/catchError', () => {
   it('should catch errors producer on observable', () => {
     const withError = new Observable((observer) => {
       observer.next(1);
