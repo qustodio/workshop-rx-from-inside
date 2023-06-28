@@ -1,8 +1,10 @@
 import Observer from './Observer';
+import Pipeable from './Pipeable';
 import subscription from './Subscription';
 
-class Subject {
+class Subject extends Pipeable {
   constructor() {
+    super();
     this._observers = [];
   }
 

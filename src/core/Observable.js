@@ -1,9 +1,11 @@
 import Observer from './Observer';
+import Pipeable from './Pipeable';
 import Subscription from './Subscription';
 import { noop } from './helpers';
 
-class Observable {
+class Observable extends Pipeable {
   constructor(subscribe) {
+    super();
     this._subscribe = subscribe;
   }
 

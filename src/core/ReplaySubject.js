@@ -1,8 +1,10 @@
 import Observer from './Observer';
+import Pipeable from './Pipeable';
 import Subscription from './Subscription';
 
-class ReplaySubject {
+class ReplaySubject extends Pipeable {
   constructor(bufferSize = 0) {
+    super();
     this._observers = [];
     this._buffer = [];
     this._bufferSize = bufferSize;
