@@ -1,7 +1,7 @@
 import { mergeMap } from './mergeMap';
 import { seq } from '../creation/seq';
 
-describe.skip('operators/mergeMap', () => {
+describe('operators/mergeMap', () => {
   it('should flat observables values', () => {
     const numbers = seq([1, 2, 3], 50);
     const pairs = mergeMap((x) =>
